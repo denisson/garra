@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  size: 1
+  content_type: MyString
+  filename: MyString
+  width: 1
+  height: 1
+  parent_id: 1
+  thumbnail: MyString
+  allowed: false
+  event_id: 1
+  user_id: 1
+
+two:
+  size: 1
+  content_type: MyString
+  filename: MyString
+  width: 1
+  height: 1
+  parent_id: 1
+  thumbnail: MyString
+  allowed: false
+  event_id: 1
+  user_id: 1

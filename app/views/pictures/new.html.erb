@@ -1,0 +1,32 @@
+<h1>New picture</h1>
+
+<%= error_messages_for :picture %>
+
+<% form_for(@picture, :html => { :multipart => true }) do |f| %>
+
+  <p>
+    <b>Filename</b><br />
+    <%= f.file_field :uploaded_data %>
+  </p>
+
+  <p>
+    <b>Allowed</b><br />
+    <%= f.check_box :allowed %>
+  </p>
+
+  <p>
+    <b>Event</b><br />
+    <%= f.text_field :event_id %>
+  </p>
+
+  <p>
+    <b>User</b><br />
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pictures_path %>

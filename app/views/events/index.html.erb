@@ -1,0 +1,32 @@
+<h1>Listing events</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Url</th>
+    <th>Dtstart</th>
+    <th>Dtend</th>
+    <th>Timezone</th>
+    <th>Description</th>
+  </tr>
+
+<% for event in @events %>
+  <tr>
+    <td><%=h event.name %></td>
+    <td><%=h event.location %></td>
+    <td><%=h event.url %></td>
+    <td><%=h event.dtstart %></td>
+    <td><%=h event.dtend %></td>
+    <td><%=h event.timezone %></td>
+    <td><%=h event.description %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New event', new_event_path %>

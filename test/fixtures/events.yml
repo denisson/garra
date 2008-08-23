@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  location: MyString
+  url: MyString
+  dtstart: 2008-08-12 01:48:18
+  dtend: 2008-08-12 01:48:18
+  timezone: MyString
+  description: MyText
+
+two:
+  name: MyString
+  location: MyString
+  url: MyString
+  dtstart: 2008-08-12 01:48:18
+  dtend: 2008-08-12 01:48:18
+  timezone: MyString
+  description: MyText
