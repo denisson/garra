@@ -9941,3 +9941,1630 @@ Processing PicturesController#show (for 127.0.0.1 at 2008-08-23 12:57:18) [GET]
 Rendering template within layouts/pictures
 Rendering pictures/show
 Completed in 0.57800 (1 reqs/sec) | Rendering: 0.06300 (10%) | DB: 0.03100 (5%) | 200 OK [http://localhost/pictures/4]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2008-08-25 11:20:41) [GET]
+  Session ID: f6a4512f723dc51abc04d64e7cf76f9f
+  Parameters: {"name"=>"home", "action"=>"show", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.094000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.015000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.109000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPage Columns (0.032000)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.015000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.subpages):
+    /app/controllers/viewer_controller.rb:7:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-08-25 11:20:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--d0b258f4f8355e264928461d9617e682cfddbd2b
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x5dc1f90 @filter=:login_required>] rendered_or_redirected.
+Completed in 0.03100 (32 reqs/sec) | DB: 0.26500 (854%) | 302 Found [http://localhost/pages]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-08-25 11:20:52) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA%3D--63da73de780a95e1d5c06e974e45de1dcdf16555
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.03100 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:21:26) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.016000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Load (0.125000)[0m   [0;1mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;35;1mPicture Columns (0.015000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+Completed in 1.40600 (0 reqs/sec) | Rendering: 0.09400 (6%) | DB: 0.15600 (11%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:21:41) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.047000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 4) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.50000 (2 reqs/sec) | Rendering: 0.06200 (12%) | DB: 0.06300 (12%) | 200 OK [http://localhost/pictures/4]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:21:49) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.016000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 1) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.43700 (2 reqs/sec) | Rendering: 0.01500 (3%) | DB: 0.04800 (10%) | 200 OK [http://localhost/pictures/1]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:21:53) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.42200 (2 reqs/sec) | Rendering: 0.03100 (7%) | DB: 0.01600 (3%) | 200 OK [http://localhost/pictures/2]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:21:57) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.015000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 3) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.42200 (2 reqs/sec) | Rendering: 0.01600 (3%) | DB: 0.03100 (7%) | 200 OK [http://localhost/pictures/3]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:22:01) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.016000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.015000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 4) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.40600 (2 reqs/sec) | Rendering: 0.01600 (3%) | DB: 0.03100 (7%) | 200 OK [http://localhost/pictures/4]
+
+
+Processing PicturesController#edit (for 127.0.0.1 at 2008-08-25 11:22:07) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 1) [0m
+Rendering template within layouts/pictures
+Rendering pictures/edit
+Completed in 0.51500 (1 reqs/sec) | Rendering: 0.07800 (15%) | DB: 0.01500 (2%) | 200 OK [http://localhost/pictures/1/edit]
+
+
+Processing PicturesController#destroy (for 127.0.0.1 at 2008-08-25 11:22:20) [DELETE]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "_method"=>"delete", "action"=>"destroy", "id"=>"4", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.015000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 4) [0m
+  [4;35;1mSQL (0.063000)[0m   [0mBEGIN[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (pictures.parent_id = 4) [0m
+  [4;35;1mPicture Destroy (0.000000)[0m   [0m DELETE FROM `pictures`
+ WHERE `id` = 4
+[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures
+Completed in 0.48400 (2 reqs/sec) | DB: 0.09400 (19%) | 302 Found [http://localhost/pictures/4]
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:22:22) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Load (0.016000)[0m   [0;1mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;35;1mPicture Columns (0.000000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+Completed in 0.42200 (2 reqs/sec) | Rendering: 0.03100 (7%) | DB: 0.01600 (3%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:31:11) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+Completed in 0.50000 (2 reqs/sec) | Rendering: 0.03000 (5%) | DB: 0.01600 (3%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:31:18) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 1) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+
+
+ActionView::TemplateError (undefined local variable or method `attachment_obj' for #<ActionView::Base:0x5dca104>) on line #12 of pictures/show.html.erb:
+9: </p>
+10: 
+11: <p>
+12: <%= attachment_obj.public_filename%>
+13:   <b>Filename:</b>
+14:   <%=h @picture.filename %>
+15: </p>
+
+    app/views/pictures/show.html.erb:12:in `_run_erb_47app47views47pictures47show46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pictures_controller.rb:18:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:31:40) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.016000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Load (0.015000)[0m   [0mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;36;1mPicture Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+Completed in 0.42200 (2 reqs/sec) | Rendering: 0.03200 (7%) | DB: 0.03100 (7%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:31:42) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.016000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.43800 (2 reqs/sec) | Rendering: 0.03100 (7%) | DB: 0.01600 (3%) | 200 OK [http://localhost/pictures/2]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:42:42) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.000000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+
+
+ActionView::TemplateError (undefined method `image' for #<ActionView::Base:0x5dde564>) on line #12 of pictures/show.html.erb:
+9: </p>
+10: 
+11: <p>
+12: <%= image @picture.public_filename%>
+13:   <b>Filename:</b>
+14:   <%=h @picture.filename %>
+15: </p>
+
+    app/views/pictures/show.html.erb:12:in `_run_erb_47app47views47pictures47show46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pictures_controller.rb:18:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:42:53) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.016000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+
+
+ActionView::TemplateError (undefined method `image_to' for #<ActionView::Base:0x5d61f8c>) on line #12 of pictures/show.html.erb:
+9: </p>
+10: 
+11: <p>
+12: <%= image_to @picture.public_filename%>
+13:   <b>Filename:</b>
+14:   <%=h @picture.filename %>
+15: </p>
+
+    app/views/pictures/show.html.erb:12:in `_run_erb_47app47views47pictures47show46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pictures_controller.rb:18:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:43:01) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.016000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.000000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+
+
+ActionView::TemplateError (undefined method `img' for #<ActionView::Base:0x5d02a14>) on line #12 of pictures/show.html.erb:
+9: </p>
+10: 
+11: <p>
+12: <%= img @picture.public_filename%>
+13:   <b>Filename:</b>
+14:   <%=h @picture.filename %>
+15: </p>
+
+    app/views/pictures/show.html.erb:12:in `_run_erb_47app47views47pictures47show46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pictures_controller.rb:18:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:43:20) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.015000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+
+
+ActionView::TemplateError (undefined method `img_for' for #<ActionView::Base:0x5e72214>) on line #12 of pictures/show.html.erb:
+9: </p>
+10: 
+11: <p>
+12: <%= img_for @picture.public_filename%>
+13:   <b>Filename:</b>
+14:   <%=h @picture.filename %>
+15: </p>
+
+    app/views/pictures/show.html.erb:12:in `_run_erb_47app47views47pictures47show46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/pictures_controller.rb:18:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:43:49) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.016000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.43800 (2 reqs/sec) | Rendering: 0.03100 (7%) | DB: 0.03200 (7%) | 200 OK [http://localhost/pictures/2]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:44:21) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.016000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 2) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.43800 (2 reqs/sec) | Rendering: 0.01600 (3%) | DB: 0.03200 (7%) | 200 OK [http://localhost/pictures/2]
+
+
+Processing PicturesController#new (for 127.0.0.1 at 2008-08-25 11:45:56) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"new", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.015000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 0.43800 (2 reqs/sec) | Rendering: 0.03200 (7%) | DB: 0.01500 (3%) | 200 OK [http://localhost/pictures/new]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-25 11:46:11) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4492-1>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.015000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.031000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4492-0") failed: Error Given 
+  [4;35;1mPicture Create (0.093000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-25 11:46:12', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-25 11:46:12', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 5 AND `pictures`.`thumbnail` = 'geometry') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4492-1") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'geometry', '2008-08-25 11:46:12', 'banner_Sarah_Sheeva_tudo_mudou_geometry.JPG', NULL, NULL, 5, '2008-08-25 11:46:12', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 5 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4492-2") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-25 11:46:12', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 5, '2008-08-25 11:46:12', NULL)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/5
+Completed in 0.87500 (1 reqs/sec) | DB: 0.15500 (17%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:46:14) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 5) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.43700 (2 reqs/sec) | Rendering: 0.01500 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pictures/5]
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:49:44) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.01600 (14%) | DB: 0.01600 (14%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#destroy (for 127.0.0.1 at 2008-08-25 11:49:50) [DELETE]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "_method"=>"delete", "action"=>"destroy", "id"=>"7", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 7) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Destroy (0.000000)[0m   [0m DELETE FROM `pictures`
+ WHERE `id` = 7
+[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures
+Completed in 0.10900 (9 reqs/sec) | DB: 0.03200 (29%) | 302 Found [http://localhost/pictures/7]
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:49:51) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;35;1mPicture Columns (0.015000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.03200 (29%) | DB: 0.01500 (13%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#destroy (for 127.0.0.1 at 2008-08-25 11:49:55) [DELETE]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "_method"=>"delete", "action"=>"destroy", "id"=>"6", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.015000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.000000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 6) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mPicture Destroy (0.000000)[0m   [0;1m DELETE FROM `pictures`
+ WHERE `id` = 6
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pictures
+Completed in 0.09400 (10 reqs/sec) | DB: 0.01500 (15%) | 302 Found [http://localhost/pictures/6]
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:49:57) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;36;1mPicture Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01600 (14%) | DB: 0.03100 (28%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#destroy (for 127.0.0.1 at 2008-08-25 11:50:02) [DELETE]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "_method"=>"delete", "action"=>"destroy", "id"=>"5", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 5) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (pictures.parent_id = 5) [0m
+  [4;36;1mPicture Destroy (0.000000)[0m   [0;1m DELETE FROM `pictures`
+ WHERE `id` = 5
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pictures
+Completed in 0.10900 (9 reqs/sec) | DB: 0.01600 (14%) | 302 Found [http://localhost/pictures/5]
+
+
+Processing PicturesController#index (for 127.0.0.1 at 2008-08-25 11:50:04) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"index", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.016000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` [0m
+Rendering template within layouts/pictures
+Rendering pictures/index
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.03200 (29%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#new (for 127.0.0.1 at 2008-08-25 11:50:08) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"new", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03100 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pictures/new]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-25 11:50:36) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4492-1>, "user_id"=>"1"}}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4492-0") failed: Error Given 
+  [4;36;1mPicture Create (0.000000)[0m   [0;1mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-25 11:50:37', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-25 11:50:37', NULL)[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 8 AND `pictures`.`thumbnail` = 'geometry') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4492-1") failed: Error Given 
+  [4;36;1mPicture Create (0.000000)[0m   [0;1mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'geometry', '2008-08-25 11:50:37', 'banner_Sarah_Sheeva_tudo_mudou_geometry.JPG', NULL, NULL, 8, '2008-08-25 11:50:37', NULL)[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 8 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4492-2") failed: Error Given 
+  [4;36;1mPicture Create (0.000000)[0m   [0;1mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-25 11:50:37', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 8, '2008-08-25 11:50:37', NULL)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/8
+Completed in 0.62500 (1 reqs/sec) | DB: 0.03200 (5%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-25 11:50:38) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 8) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.01600 (14%) | 200 OK [http://localhost/pictures/8]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:13:47) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"pictures"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.047000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.031000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.063000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mSQL (0.016000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPicture Columns (0.047000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPicture Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+
+
+NameError (uninitialized constant Picture::MiniMagick):
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:478:in `const_missing'
+    /app/models/picture.rb:2
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:471:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:471:in `const_missing'
+    /app/controllers/pictures_controller.rb:16:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:14:23) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 8) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.86000 (1 reqs/sec) | Rendering: 0.04700 (5%) | DB: 0.25100 (29%) | 200 OK [http://localhost/pictures/8]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 00:14:39) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI5704-1>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5704-0") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-27 00:14:39', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-27 00:14:39', NULL)[0m
+  [4;36;1mPicture Load (0.016000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 11 AND `pictures`.`thumbnail` = 'geometry') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5704-1") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'geometry', '2008-08-27 00:14:39', 'banner_Sarah_Sheeva_tudo_mudou_geometry.JPG', NULL, NULL, 11, '2008-08-27 00:14:39', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 11 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5704-2") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-27 00:14:39', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 11, '2008-08-27 00:14:39', NULL)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/11
+Completed in 0.46900 (2 reqs/sec) | DB: 0.03200 (6%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:14:40) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.015000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 11) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01600 (14%) | DB: 0.03100 (28%) | 200 OK [http://localhost/pictures/11]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:16:04) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.000000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.016000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 11) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.01600 (14%) | DB: 0.01600 (14%) | 200 OK [http://localhost/pictures/11]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 00:16:14) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI5704-1>, "user_id"=>"1"}}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5704-0") failed: Error Given 
+  [4;36;1mPicture Create (0.000000)[0m   [0;1mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-27 00:16:15', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-27 00:16:15', NULL)[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 14 AND `pictures`.`thumbnail` = 'geometry') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5704-1") failed: Error Given 
+  [4;36;1mPicture Create (0.000000)[0m   [0;1mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'geometry', '2008-08-27 00:16:15', 'banner_Sarah_Sheeva_tudo_mudou_geometry.JPG', NULL, NULL, 14, '2008-08-27 00:16:15', NULL)[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 14 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5704-2") failed: Error Given 
+  [4;36;1mPicture Create (0.000000)[0m   [0;1mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-27 00:16:15', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 14, '2008-08-27 00:16:15', NULL)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/14
+Completed in 0.43700 (2 reqs/sec) | DB: 0.03100 (7%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:16:16) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"pictures"}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mPicture Load (0.016000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 14) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01500 (13%) | DB: 0.03200 (29%) | 200 OK [http://localhost/pictures/14]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 00:17:03) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI5344-1>, "user_id"=>"1"}}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5344-0") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-27 00:17:05', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-27 00:17:05', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 17 AND `pictures`.`thumbnail` = 'geometry') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5344-1") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'geometry', '2008-08-27 00:17:05', 'banner_Sarah_Sheeva_tudo_mudou_geometry.JPG', NULL, NULL, 17, '2008-08-27 00:17:05', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 17 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick5344-2") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-27 00:17:05', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 17, '2008-08-27 00:17:05', NULL)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/17
+Completed in 1.23500 (0 reqs/sec) | DB: 0.01600 (1%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:17:06) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 17) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03200 (25%) | DB: 0.01600 (12%) | 200 OK [http://localhost/pictures/17]
+
+
+Processing PicturesController#new (for 127.0.0.1 at 2008-08-27 00:20:45) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"action"=>"new", "controller"=>"pictures"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.078000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.031000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 1.06200 (0 reqs/sec) | Rendering: 0.07800 (7%) | DB: 0.10900 (10%) | 200 OK [http://localhost/pictures/new]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 00:21:14) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4252-1>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.015000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4252-0") failed: Error Given 
+  [4;35;1mPicture Create (0.031000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-27 00:21:14', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-27 00:21:14', NULL)[0m
+  [4;36;1mPicture Load (0.016000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 20 AND `pictures`.`thumbnail` = 'geometry') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4252-1") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'geometry', '2008-08-27 00:21:14', 'banner_Sarah_Sheeva_tudo_mudou_geometry.JPG', NULL, NULL, 20, '2008-08-27 00:21:14', NULL)[0m
+  [4;36;1mPicture Load (0.016000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 20 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4252-2") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-27 00:21:15', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 20, '2008-08-27 00:21:15', NULL)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/20
+Completed in 0.56200 (1 reqs/sec) | DB: 0.09400 (16%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:21:16) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.015000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 20) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.28100 (3 reqs/sec) | Rendering: 0.03100 (11%) | DB: 0.03100 (11%) | 200 OK [http://localhost/pictures/20]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 00:25:14) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4252-1>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.031000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4252-3") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-27 00:25:14', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-27 00:25:14', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 23 AND `pictures`.`thumbnail` = 'geometry') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4252-4") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'geometry', '2008-08-27 00:25:14', 'banner_Sarah_Sheeva_tudo_mudou_geometry.JPG', NULL, NULL, 23, '2008-08-27 00:25:14', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 23 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4252-5") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-27 00:25:14', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 23, '2008-08-27 00:25:14', NULL)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/23
+Completed in 0.51600 (1 reqs/sec) | DB: 0.04700 (9%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 00:25:16) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"23", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.015000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 23) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.01600 (11%) | DB: 0.03100 (21%) | 200 OK [http://localhost/pictures/23]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 00:28:35) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4488-1>, "user_id"=>"1"}}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.015000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.015000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4488-0") failed: Error Given 
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 0.96900 (1 reqs/sec) | Rendering: 0.03100 (3%) | DB: 0.04600 (4%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 00:29:25) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4488-2>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01500 (13%) | DB: 0.01600 (14%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 11:53:32) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI488-1>, "user_id"=>"1"}}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.110000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.031000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.234000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.110000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 1.93700 (0 reqs/sec) | Rendering: 0.07800 (4%) | DB: 0.50100 (25%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 11:54:02) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI488-2>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-0") failed: Error Given 
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 0.28100 (3 reqs/sec) | Rendering: 0.01500 (5%) | DB: 0.01600 (5%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 11:54:09) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>"", "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.015000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.01600 (12%) | DB: 0.01500 (12%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 11:55:43) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI488-3>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-0") failed: Error Given 
+  [4;35;1mPicture Create (0.125000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 0, NULL, '2008-08-27 11:55:43', 'banner_Sarah_Sheeva_tudo_mudou.JPG', NULL, 1, NULL, '2008-08-27 11:55:43', NULL)[0m
+  [4;36;1mPicture Load (0.016000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 26 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-1") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 132479, 'thumb', '2008-08-27 11:55:43', 'banner_Sarah_Sheeva_tudo_mudou_thumb.JPG', NULL, NULL, 26, '2008-08-27 11:55:43', NULL)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/26
+Completed in 0.57800 (1 reqs/sec) | DB: 0.15700 (27%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 11:55:44) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"26", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.016000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.015000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 26) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.03100 (22%) | DB: 0.04700 (33%) | 200 OK [http://localhost/pictures/26]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 12:18:52) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI488-2>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.015000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-0") failed: Error Given 
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/pictures
+Rendering pictures/new
+Completed in 0.23500 (4 reqs/sec) | Rendering: 0.01600 (6%) | DB: 0.01500 (6%) | 200 OK [http://localhost/pictures]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 12:22:34) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<ActionController::UploadedStringIO:0x7efd7f4>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-0.jpg") failed: Error Given 
+  [4;35;1mPicture Create (0.031000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 15374, NULL, '2008-08-27 12:22:34', 'garra_preto_branco.jpg', NULL, 1, NULL, '2008-08-27 12:22:34', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 28 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-1.jpg") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 15374, 'thumb', '2008-08-27 12:22:34', 'garra_preto_branco_thumb.jpg', NULL, NULL, 28, '2008-08-27 12:22:34', NULL)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/28
+Completed in 0.29700 (3 reqs/sec) | DB: 0.04700 (15%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 12:22:36) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"28", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.016000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 28) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 14.21900 (0 reqs/sec) | Rendering: 0.01500 (0%) | DB: 0.03200 (0%) | 200 OK [http://localhost/pictures/28]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 12:28:56) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<ActionController::UploadedStringIO:0x7f3364c>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-0.jpg") failed: Error Given 
+  [4;35;1mPicture Create (0.015000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', 1, 0, 15374, NULL, '2008-08-27 12:28:56', 'garra_preto_branco.jpg', NULL, 1, NULL, '2008-08-27 12:28:56', NULL)[0m
+  [4;36;1mPicture Load (0.000000)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`parent_id` = 30 AND `pictures`.`thumbnail` = 'thumb') LIMIT 1[0m
+Exception working with image: ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick488-1.jpg") failed: Error Given 
+  [4;35;1mPicture Create (0.000000)[0m   [0mINSERT INTO `pictures` (`content_type`, `event_id`, `allowed`, `size`, `thumbnail`, `updated_at`, `filename`, `height`, `user_id`, `parent_id`, `created_at`, `width`) VALUES('image/jpeg', NULL, NULL, 15374, 'thumb', '2008-08-27 12:28:56', 'garra_preto_branco_thumb.jpg', NULL, NULL, 30, '2008-08-27 12:28:56', NULL)[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pictures/30
+Completed in 0.28200 (3 reqs/sec) | DB: 0.04700 (16%) | 302 Found [http://localhost/pictures]
+
+
+Processing PicturesController#show (for 127.0.0.1 at 2008-08-27 12:28:57) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZQaWN0dXJlIHdh%0AcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4GOgpAdXNlZHsGOwdUOgxjc3JmX2lk%0AIiU4OTgyNmFmMWVhMjdhYjQzZjczODllM2ZmZTFlMzhiNA%3D%3D--756e5bc8423590f66f27d2549da9f4fa0c24ef1d
+  Parameters: {"action"=>"show", "id"=>"30", "controller"=>"pictures"}
+  [4;35;1mPage Load (0.016000)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;36;1mPicture Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `pictures`[0m
+  [4;35;1mPicture Load (0.000000)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 30) [0m
+Rendering template within layouts/pictures
+Rendering pictures/show
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01500 (13%) | DB: 0.03200 (29%) | 200 OK [http://localhost/pictures/30]
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 12:31:26) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<ActionController::UploadedStringIO:0x44b6488>, "user_id"=>"1"}}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+MiniMagick::MiniMagickError (ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4068-0.jpg") failed: Error Given ):
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:124:in `run_command'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:47:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:29:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:29:in `from_blob'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:35:in `from_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:34:in `open'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:34:in `from_file'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/processors/mini_magick_processor.rb:15:in `with_image'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu.rb:357:in `with_image'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/processors/mini_magick_processor.rb:30:in `process_attachment'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:307:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:307:in `callback'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:304:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:304:in `callback'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:275:in `valid?'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:933:in `save_without_transactions'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/pictures_controller.rb:46:in `create'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/pictures_controller.rb:45:in `create'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 12:34:24) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4068-1>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.016000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.015000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+MiniMagick::MiniMagickError (ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4068-0") failed: Error Given ):
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:124:in `run_command'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:47:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:29:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:29:in `from_blob'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:35:in `from_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:34:in `open'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:34:in `from_file'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/processors/mini_magick_processor.rb:15:in `with_image'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu.rb:357:in `with_image'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/processors/mini_magick_processor.rb:30:in `process_attachment'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:307:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:307:in `callback'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:304:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:304:in `callback'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:275:in `valid?'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:933:in `save_without_transactions'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/pictures_controller.rb:46:in `create'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/pictures_controller.rb:45:in `create'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PicturesController#create (for 127.0.0.1 at 2008-08-27 12:35:48) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgsvcGFnZXMiCmZsYXNoSUM6J0FjdGlvbkNvbnRy%0Ab2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZfaWQi%0AJTg5ODI2YWYxZWEyN2FiNDNmNzM4OWUzZmZlMWUzOGI0--9667af0d49db00f865245727c8ffd1b0e0d449a8
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2accb449ef6beb936d25348a848694be1614f785", "action"=>"create", "controller"=>"pictures", "picture"=>{"event_id"=>"1", "allowed"=>"0", "uploaded_data"=>#<File:C:/Users/Denisson/AppData/Local/Temp/CGI4068-2>, "user_id"=>"1"}}
+  [4;36;1mPage Load (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL and admin != 1) ORDER BY position[0m
+  [4;35;1mPicture Columns (0.016000)[0m   [0mSHOW FIELDS FROM `pictures`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+MiniMagick::MiniMagickError (ImageMagick command (identify "C:/Users/Denisson/AppData/Local/Temp/minimagick4068-1") failed: Error Given ):
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:124:in `run_command'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:47:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:29:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:29:in `from_blob'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:35:in `from_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:34:in `open'
+    c:/ruby/lib/ruby/gems/1.8/gems/mini_magick-1.2.3/lib/mini_magick.rb:34:in `from_file'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/processors/mini_magick_processor.rb:15:in `with_image'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu.rb:357:in `with_image'
+    /vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/processors/mini_magick_processor.rb:30:in `process_attachment'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:307:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:307:in `callback'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:304:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:304:in `callback'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:275:in `valid?'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:933:in `save_without_transactions'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/pictures_controller.rb:46:in `create'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `call'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/pictures_controller.rb:45:in `create'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)

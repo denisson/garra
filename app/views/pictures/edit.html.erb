@@ -2,40 +2,11 @@
 
 <%= error_messages_for :picture %>
 
-<% form_for(@picture) do |f| %>
-  <p>
-    <b>Size</b><br />
-    <%= f.text_field :size %>
-  </p>
-
-  <p>
-    <b>Content type</b><br />
-    <%= f.text_field :content_type %>
-  </p>
+<% form_for(@picture, :html => { :multipart => true }) do |f| %>
 
   <p>
     <b>Filename</b><br />
-    <%= f.text_field :filename %>
-  </p>
-
-  <p>
-    <b>Width</b><br />
-    <%= f.text_field :width %>
-  </p>
-
-  <p>
-    <b>Height</b><br />
-    <%= f.text_field :height %>
-  </p>
-
-  <p>
-    <b>Parent</b><br />
-    <%= f.text_field :parent_id %>
-  </p>
-
-  <p>
-    <b>Thumbnail</b><br />
-    <%= f.text_field :thumbnail %>
+    <%= f.file_field :uploaded_data %>
   </p>
 
   <p>

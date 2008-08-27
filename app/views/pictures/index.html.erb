@@ -2,13 +2,7 @@
 
 <table>
   <tr>
-    <th>Size</th>
-    <th>Content type</th>
     <th>Filename</th>
-    <th>Width</th>
-    <th>Height</th>
-    <th>Parent</th>
-    <th>Thumbnail</th>
     <th>Allowed</th>
     <th>Event</th>
     <th>User</th>
@@ -16,13 +10,8 @@
 
 <% for picture in @pictures %>
   <tr>
-    <td><%=h picture.size %></td>
-    <td><%=h picture.content_type %></td>
+
     <td><%=h picture.filename %></td>
-    <td><%=h picture.width %></td>
-    <td><%=h picture.height %></td>
-    <td><%=h picture.parent_id %></td>
-    <td><%=h picture.thumbnail %></td>
     <td><%=h picture.allowed %></td>
     <td><%=h picture.event_id %></td>
     <td><%=h picture.user_id %></td>

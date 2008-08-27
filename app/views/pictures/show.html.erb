@@ -9,6 +9,10 @@
 </p>
 
 <p>
+    <%= tag('img', {:src => @picture.public_filename})%>
+</p>
+
+<p>
   <b>Filename:</b>
   <%=h @picture.filename %>
 </p>
